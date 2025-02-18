@@ -6,12 +6,17 @@ import { useState } from "react";
 export default function App(){
 
   const [data, setData] = useState({
-    name:"",
-    email: "",
-    location: "",
-    linkedin: "",
-    about: ""
-
+    name:"Gautam Tayal",
+    email: "gautamtayal65@gmail.com",
+    location: "India",
+    linkedin: "linkedin.com/gautam-tayal",
+    about: "Hello world   ",
+    education: {
+      name: "symbiosis"
+    },
+    experience: {},
+    projects: {},
+    skills: {}
   })
 
   return(

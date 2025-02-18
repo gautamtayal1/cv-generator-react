@@ -30,6 +30,7 @@ export default function ResumePreview({ data }) {
       <div className="sec3 p-[10px]">
         <div className="educationBox">
           <h1 className='text-[30px] font-bold'>Education</h1><hr />
+          <div>{data.education.name}</div>
         </div>
         <div className="educationBox">
           <h1 className='text-[30px] font-bold'>Experience</h1><hr />

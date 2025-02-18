@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { AddInfoCard } from "./AddInfoCards"
 
-export default function InfoCards({ header, textInput, numInput }) {
+export default function InfoCards({ header, textInput, numInput, data, setData }) {
 
   const [isClicked, setIsClicked] = useState(false)
   const [btnClicked, setBtnClicked] = useState(false)
@@ -28,7 +28,7 @@ export default function InfoCards({ header, textInput, numInput }) {
       {isClicked &&
         <div className="info border border-t-0 bg-white rounded-2xl rounded-t-none w-[370px] p-4">
           <div className="flex justify-between">
-            <span>Symbiosis School of Economics</span>
+            <span>{data[header.toLowerCase()]?.name || ''}</span>
             <span>
               <i className="fa-solid fa-pen-to-square"></i>
               <i className="fa-solid fa-trash"></i>
@@ -48,7 +48,13 @@ export default function InfoCards({ header, textInput, numInput }) {
       { /* // ********************   inputCard    ******************** */}
       
       {btnClicked &&
-        <AddInfoCard textInput={textInput} numInput={numInput} />
+        <AddInfoCard 
+          textInput={textInput} 
+          numInput={numInput} 
+          data={data} 
+          setData={setData} 
+          category={header.toLowerCase()}
+        />
       }
     </div>
     

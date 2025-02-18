@@ -6,6 +6,16 @@ export default function InputSection({ data, setData }) {
 
   const [isClicked, setIsClicked] = useState(false)
 
+  function addInfo(category, newItem) {
+    setData((prev) =>({
+      ...prev, 
+      [category] :{
+        ...prev[category],
+        newItem
+      }
+    }))
+  }
+
   return(
     <>
 
@@ -24,10 +34,33 @@ export default function InputSection({ data, setData }) {
         </div>
       
 
-        <InfoCards header={"Education"} textInput={["School", "Course"]} numInput={["Start Date", "End Date"]}/>
-        <InfoCards header={"Experience"} textInput={["Position", "Company", "Achievements"]} numInput={["Start Date", "End Date"]}/>
-        <InfoCards header={"Projects"} textInput={["Name", "Tools", "Description"]} numInput={[]}/>
-        <InfoCards header={"Skills"} textInput={["Skill"]} numInput={[]}/>
+        <InfoCards 
+        header={"Education"} 
+        textInput={["School", "Course"]} 
+        numInput={["Start Date", "End Date"]} 
+        data={data} 
+        setData={(newItem) => addInfo("education", newItem)}/>
+
+        <InfoCards 
+        header={"Experience"} 
+        textInput={["Position", "Company", "Achievements"]} 
+        numInput={["Start Date", "End Date"]} 
+        data={data} 
+        setData={(newItem) => addInfo("experience", newItem)}/>
+
+        <InfoCards 
+        header={"Projects"} 
+        textInput={["Name", "Tools", "Description"]} 
+        numInput={[]} 
+        data={data} 
+        setData={(newItem) => addInfo("projects", newItem)}/>
+
+        <InfoCards 
+        header={"Skills"} 
+        textInput={["Skill"]} 
+        numInput={[]} 
+        data={data} 
+        setData={(newItem) => addInfo("skills", newItem)}/>
     </>
     
   )
