@@ -23,11 +23,11 @@ export default function InputSection() {
           
         </div>
       
-      
-        <InfoCards header={"Education"} />
-        <InfoCards header={"Experience"} />
-        <InfoCards header={"Projects"} />
-        <InfoCards header={"Skills"} />
+
+        <InfoCards header={"Education"} textInput={["School", "Course"]} numInput={["Start Date", "End Date"]}/>
+        <InfoCards header={"Experience"} textInput={["Position", "Company", "Achievements"]} numInput={["Start Date", "End Date"]}/>
+        <InfoCards header={"Projects"} textInput={["Name", "Tools", "Description"]} numInput={[]}/>
+        <InfoCards header={"Skills"} textInput={["Skill"]} numInput={[]}/>
     </>
     
   )

@@ -9,5 +9,5 @@
 }
 
 button{
-  @apply border bg-gray-50
+  @apply border bg-gray-50 p-1 rounded font-medium w-[47%] mr-2
 }
