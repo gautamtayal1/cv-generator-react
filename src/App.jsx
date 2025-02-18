@@ -1,19 +1,19 @@
 import { useState } from "react";
 import PersonalCard from "./components/PersonalCard";
-
+import InputSection from "./components/InputSection";
+import Navbar from "./Navbar";
 
 export default function App(){
 
-  const [isClicked, setIsClicked] = useState(false)
   return(
     <>
-        <h1
-        onClick={() => setIsClicked(!isClicked)}
-        >perosnal details</h1>
-
-        <div className="">
-          {isClicked && <PersonalCard />}
+      <Navbar />
+      <div className="body bg-gray-300">
+        <div className="left h-auto min-h-[100vh] w-[40vw] flex flex-col gap-5 items-center p-5 border-r">
+          <InputSection />
         </div>
+      </div>
+      
     </>
     
   )

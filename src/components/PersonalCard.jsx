@@ -1,24 +1,22 @@
-import React from 'react'
-
 const PersonalCard = () => {
   return (
     <div>
-      <form className='border overflow-hidden max-h-none w-auto'>
+      <form className='border border-t-0 bg-white rounded-2xl rounded-t-none w-[370px] p-4'>
 
-        <label htmlFor="name">Name</label><br />
-        <input type="text" id="name" placeholder="gautam" /><br />
+        <label htmlFor="name" className="label">Name</label><br />
+        <input type="text" id="name" placeholder="gautam" className="input"/><br />
 
-        <label htmlFor="email">Email</label><br />
-        <input type="text" id="email" placeholder="" /><br />
+        <label htmlFor="email" className="label">Email</label><br />
+        <input type="text" id="email" placeholder="" className="input"/><br />
 
-        <label htmlFor="location">Location</label><br />
-        <input type="text" id="location" placeholder="location" /><br />
+        <label htmlFor="location" className="label">Location</label><br />
+        <input type="text" id="location" placeholder="location" className="input"/><br />
 
-        <label htmlFor="linkedin">LinkedIn</label><br />
-        <input type="text" id="linkedin" placeholder="linkedin" /><br />
+        <label htmlFor="linkedin" className="label">LinkedIn</label><br />
+        <input type="text" id="linkedin" placeholder="linkedin" className="input"/><br />
 
-        <label htmlFor="about">About</label><br />
-        <input type="text" id="about" placeholder="about" /><br />
+        <label htmlFor="about" className="label">About</label><br />
+        <input type="text" id="about" placeholder="about" className="input"/><br />
       </form>
     </div>
   )

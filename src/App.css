@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+.input{
+  @apply bg-gray-300 w-[97%] h-10 my-1 rounded p-3
+}
+
+.label{
+  @apply text-[20px] font-medium
+}
+
+button{
+  @apply border bg-gray-50
+}
