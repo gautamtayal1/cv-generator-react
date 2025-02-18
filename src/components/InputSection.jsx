@@ -2,7 +2,7 @@ import { useState } from "react"
 import PersonalCard from "./PersonalCard"
 import InfoCards from "./InfoCards"
 
-export default function InputSection() {
+export default function InputSection({ data, setData }) {
 
   const [isClicked, setIsClicked] = useState(false)
 
@@ -18,7 +18,7 @@ export default function InputSection() {
           }`}>Personal Details
           </h1>
           <div className="div">
-            {isClicked && <PersonalCard />}
+            {isClicked && <PersonalCard data={data} setData={setData}/>}
           </div>  
           
         </div>
