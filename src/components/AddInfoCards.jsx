@@ -15,6 +15,7 @@ export function AddInfoCard({ textInput, numInput, onSubmit, header, data, setDa
   };
 
   const handleSubmit = (e) => {
+    
     e.preventDefault();
     setData(prev => ({
       ...prev,
