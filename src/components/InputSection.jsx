@@ -18,7 +18,6 @@ export default function InputSection({ data, setData }) {
 
   return(
     <>
-
         <div className="full">
           <h1
           onClick={() => setIsClicked(!isClicked)}
@@ -33,18 +32,17 @@ export default function InputSection({ data, setData }) {
           
         </div>
       
-
         <InfoCards 
         header={"Education"} 
         textInput={["School", "Course"]} 
-        numInput={["Start Date", "End Date"]} 
+        numInput={["startdate", "enddate"]} 
         data={data} 
         setData={(newItem) => addInfo("education", newItem)}/>
 
         <InfoCards 
         header={"Experience"} 
         textInput={["Position", "Company", "Achievements"]} 
-        numInput={["Start Date", "End Date"]} 
+        numInput={["startdate", "enddate"]} 
         data={data} 
         setData={(newItem) => addInfo("experience", newItem)}/>
 
